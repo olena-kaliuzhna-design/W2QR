@@ -29,7 +29,7 @@ body.home { height: 100vh; overflow: hidden; }
 
 /* stage */
 .stage {
-  --h: clamp(250px, calc(100vh - 480px), 470px);
+  --h: clamp(250px, calc(100vh - 515px), 470px);
   width: min(1240px, 100%); height: var(--h);
   display: grid; grid-template-columns: 1fr minmax(0, 330px) auto; align-items: center; gap: 36px;
   position: relative;
@@ -226,3 +226,16 @@ body.home { height: 100vh; overflow: hidden; }
   .story { max-width: 520px; justify-self: center; width: 100%; }
 }
 @media (max-width: 480px) { .stage { --h: 480px; } .hero__title { font-size: 56px; } }
+
+/* --- Readability fix: softer arch glow + scrim behind the lower text block --- */
+.home .sky--hero::after { bottom: -66vh; opacity: .55; filter: blur(60px); }
+.tagline { position: relative; }
+.tagline::before {
+  content: ""; position: absolute; inset: -40px -18vw -60px; z-index: -1; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(10, 9, 24, .78), rgba(10, 9, 24, .45) 60%, rgba(10, 9, 24, 0));
+}
+.tagline__points p { background: color-mix(in srgb, var(--panel) 88%, transparent); border-color: var(--line-strong); color: var(--ink); backdrop-filter: blur(14px); }
+.tagline h2 em { background: linear-gradient(90deg, #a9c6ff, #7cf2b8); -webkit-background-clip: text; background-clip: text; }
+.home-foot { color: var(--soft); }
+:root[data-theme="light"] .tagline::before { background: radial-gradient(closest-side, rgba(244, 242, 253, .85), rgba(244, 242, 253, .5) 60%, rgba(244, 242, 253, 0)); }
+:root[data-theme="light"] .tagline h2 em { background: linear-gradient(90deg, #3b5bff, #0e9f6e); -webkit-background-clip: text; background-clip: text; }
