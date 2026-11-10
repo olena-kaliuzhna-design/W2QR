@@ -10,7 +10,7 @@ This is a **design prototype** in plain HTML, CSS and JS. There is no build step
 ## Run / publish
 
 - **Locally:** open `index.html` in a browser, or run `npx serve .`
-- **GitHub Pages:** push this folder to a repo, then go to Settings → Pages → *Deploy from branch* → `/ (root)`. The `.nojekyll` file is already included.
+- **GitHub Pages:** push this folder to a repo, then go to Settings → Pages → *Deploy from branch* → `/ (root)`. All files sit in the repo root.
 
 ## Pages
 
@@ -40,7 +40,7 @@ On every page there is a **Master Key** button in the bottom-right corner. It al
 
 ## Home hero animation
 
-`assets/js/hero.js` contains the four flows from the live site's tabs. The text comes from the site's animation files `w2qr-anim-1…4`.
+`hero.js` contains the four flows from the live site's tabs. The text comes from the site's animation files `w2qr-anim-1…4`.
 
 | Tab | Flow | CTA |
 |---|---|---|
@@ -64,7 +64,7 @@ How the animation behaves:
 
 ## Theme
 
-**Settings → Appearance → Dark / Light** switches between the night and day palettes. The choice is stored in `localStorage`, on this device only, just like on the real site. All colours are CSS variables in `assets/css/styles.css`.
+**Settings → Appearance → Dark / Light** switches between the night and day palettes. The choice is stored in `localStorage`, on this device only, just like on the real site. All colours are CSS variables in `styles.css`.
 
 ## Notes for developers
 
@@ -80,18 +80,18 @@ How the animation behaves:
 
   Each is visually consistent with the live site, but please replace it with the real copy.
 - **Structure:**
-  - Header and footer are injected by `assets/js/app.js`.
+  - Header and footer are injected by `app.js`.
   - Each page sets `data-section` to highlight the active nav icon.
-  - Page-specific behaviour lives in `assets/js/pages.js`.
+  - Page-specific behaviour lives in `pages.js`.
 
 ```
 index.html, restore*.html, create.html, tools pages, settings.html, help.html
-assets/css/styles.css   tokens, header, buttons, cards, forms, footer, Master Key
-assets/css/home.css     single-screen hero + phone mock
-assets/css/pages.css    inner-page components (wizard, card designer, settings…)
-assets/js/app.js        icons, header/footer, theme, Master Key, shared controls
-assets/js/hero.js       animated hero (4 flows × 4 steps)
-assets/js/pages.js      page interactions
+styles.css   tokens, header, buttons, cards, forms, footer, Master Key
+home.css     single-screen hero + phone mock
+pages.css    inner-page components (wizard, card designer, settings…)
+app.js        icons, header/footer, theme, Master Key, shared controls
+hero.js       animated hero (4 flows × 4 steps)
+pages.js      page interactions
 ```
 
 © 2026 Norionsoft OÜ — design prototype.
