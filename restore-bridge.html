@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scan with Mobile — W2QR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-section="restore" data-page="bridge">
+  <div class="sky sky--page" aria-hidden="true"></div>
+  <div id="site-header"></div>
+  <main class="page page--narrow">
+    <div class="eyebrow">Open Wallet</div>
+    <h1 class="page-title">Scan with Mobile</h1>
+    <p class="page-sub">Scan the pairing QR with your phone, then scan your wallet QR and enter your password on mobile.</p>
+    <div class="panel bridge">
+      <div class="bridge__status"><span class="pulse"></span>Waiting for mobile to connect...</div>
+      <div class="bridge__qr" id="bridge-qr"></div>
+      <div class="bridge__timer mono" id="bridge-timer">1:59</div>
+      <p class="helper" style="text-align:center;max-width:360px;margin:0 auto 20px">Scan this QR code with your phone camera to start a secure bridge session.</p>
+      <div class="actions" style="justify-content:center"><a class="btn btn--glass" href="restore.html">Cancel</a></div>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/pages.js"></script>
+</body>
+</html>

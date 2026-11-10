@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Restore from Google Drive — W2QR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-section="restore" data-page="drive">
+  <div class="sky sky--page" aria-hidden="true"></div>
+  <div id="site-header"></div>
+  <main class="page page--narrow">
+    <a class="back-link" style="margin:0 0 18px" href="restore.html"><i data-icon="back"></i>Back</a>
+    <div class="eyebrow">Open Wallet</div>
+    <h1 class="page-title">Restore from Google Drive</h1>
+    <p class="page-sub">Select a wallet backup from your Google Drive.</p>
+    <div class="panel drive-panel">
+      <span class="tile__icon" style="width:64px;height:64px;border-radius:20px"><i data-icon="drive"></i></span>
+      <p class="helper" style="font-size:15px;max-width:420px;text-align:center;margin:0">Sign in with your Google account to retrieve an encrypted backup saved to your Drive. Your password never leaves this device.</p>
+      <div class="callout callout--err" id="drive-err" hidden><i data-icon="info"></i><span>Failed to open popup window</span></div>
+      <button class="btn btn--white" type="button" id="drive-btn">Try again</button>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/pages.js"></script>
+</body>
+</html>

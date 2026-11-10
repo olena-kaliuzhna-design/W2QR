@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Upload File — W2QR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-section="restore" data-page="upload">
+  <div class="sky sky--page" aria-hidden="true"></div>
+  <div id="site-header"></div>
+  <main class="page page--narrow">
+    <div class="eyebrow">Open Wallet</div>
+    <h1 class="page-title">Upload File</h1>
+    <p class="page-sub">Drag and drop QR images or text backup files, or click to browse.</p>
+    <label class="dropzone" id="dropzone">
+      <input type="file" multiple accept=".png,.jpg,.jpeg,.svg,.json,.txt,.w2qr" class="sr-only">
+      <i data-icon="upload"></i>
+      <strong>Drop QR images here, or click to browse</strong>
+      <span class="helper">PNG, JPG, SVG, JSON, TXT, or .w2qr — multiple files supported</span>
+    </label>
+    <a class="back-link" href="restore.html"><i data-icon="back"></i>Back to Open Wallet</a>
+  </main>
+  <div id="site-footer"></div>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>W2QR — Wallet Protection &amp; Recovery Suite</title>
+  <meta name="description" content="Honey-encrypted QR backup for your BIP-39 seed phrase. Virtual hardware wallet for MetaMask.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+</head>
+<body class="home" data-section="home">
+  <div class="sky sky--hero" aria-hidden="true"></div>
+  <div id="site-header"></div>
+
+  <main class="hero">
+    <h1 class="hero__title">Wallet<span>2QR</span></h1>
+
+    <div class="flow-tabs" id="flow-tabs" role="tablist" aria-label="How W2QR works"></div>
+
+    <section class="stage" id="stage" aria-live="polite">
+      <div class="story" id="story"></div>
+      <div class="stage__visual" id="visual" aria-hidden="true"></div>
+      <div class="device-col">
+        <div class="phone" aria-hidden="true"><div class="phone__screen" id="phone-screen"></div></div>
+        <div id="side"></div>
+      </div>
+    </section>
+
+    <div class="hero__cta" id="hero-cta"></div>
+
+    <section class="tagline" aria-label="About W2QR">
+      <h2>Your seed phrase, encrypted into a QR code <em>that is impossible to crack</em></h2>
+      <div class="tagline__points">
+        <p><i data-icon="shieldcheck"></i>Every wrong password creates a valid mnemonic/wallet. Attackers can never know which wallet is real.</p>
+        <p><i data-icon="globe"></i>No downloads, no apps, no extensions. Access on any device by scanning the QR.</p>
+      </div>
+      <div class="tagline__btns">
+        <a class="btn btn--white" href="create.html">Create Encrypted Wallet</a>
+        <a class="btn btn--glass" href="restore.html">Open Wallet</a>
+      </div>
+    </section>
+  </main>
+
+  <nav class="home-foot" aria-label="Footer">
+    <a href="help.html">About</a><a href="https://www.w2qr.com/terms">Terms</a><a href="https://www.w2qr.com/privacy">Privacy</a><a href="mailto:bin@norionsoft.com">Contact Us</a>
+    <span>© 2026 Norionsoft OÜ. All rights reserved.</span>
+  </nav>
+
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/hero.js"></script>
+</body>
+</html>

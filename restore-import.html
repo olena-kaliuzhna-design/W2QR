@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Import Seed Phrase — W2QR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-section="restore" data-page="">
+  <div class="sky sky--page" aria-hidden="true"></div>
+  <div id="site-header"></div>
+  <main class="page page--narrow">
+    <div class="eyebrow">Open Wallet</div>
+    <h1 class="page-title">Import Seed Phrase</h1>
+    <div class="panel">
+      <div class="panel-head"><div class="seg" role="group" aria-label="Import type"><button type="button" aria-pressed="true">Seed Phrase</button><button type="button" aria-pressed="false">Load QR (not encrypted)</button></div>
+        <a class="btn btn--glass btn--sm" href="restore.html">cancel</a></div>
+      <div class="field mt-24"><label class="label" for="imp-name">Wallet Name</label><input class="input" id="imp-name" placeholder="My Wallet"></div>
+      <div class="field"><label class="label" for="imp-seed">Seed Phrase</label><textarea class="textarea" id="imp-seed" placeholder="Enter your 12 or 24 word seed phrase..."></textarea>
+        <div><button class="ghost-btn" type="button" data-paste="imp-seed"><i data-icon="paste"></i>Paste from clipboard</button></div></div>
+      <div class="callout"><i data-icon="info"></i><span>The wallet will be unlocked in memory for this session. To create an encrypted QR backup, use “Create &gt; New Encrypted Wallet” from the menu.</span></div>
+      <div class="actions mt-24"><button class="btn btn--white" type="button">Import Wallet</button></div>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/pages.js"></script>
+</body>
+</html>

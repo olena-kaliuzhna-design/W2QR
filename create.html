@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create Encrypted Wallet — W2QR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-section="restore" data-page="create">
+  <div class="sky sky--page" aria-hidden="true"></div>
+  <div id="site-header"></div>
+  <main class="page page--narrow">
+    <div class="eyebrow">Create</div>
+    <h1 class="page-title">Create Encrypted Wallet</h1>
+    <p class="page-sub">Encrypt your wallet phrase with a password and save it as a QR code.</p>
+    <ol class="stepper" id="stepper"><li aria-current="step"><span>1</span>Seed Phrase</li><li><span>2</span>Password</li><li><span>3</span>Result</li></ol>
+
+    <section class="panel wiz" data-step="1">
+      <div class="panel-head"><h2 class="h3">Seed Phrase</h2><div class="seg" id="words-seg"><button type="button" aria-pressed="true" data-value="12">12</button><button type="button" aria-pressed="false" data-value="24">24</button></div></div>
+      <div class="field mt-16"><textarea class="textarea" id="seed" placeholder="Enter your 12-word BIP-39 mnemonic or generate one below..."></textarea>
+        <span class="helper" id="seed-count">0 words</span></div>
+      <div class="actions"><button class="btn btn--glass" type="button" id="gen-random"><i data-icon="dice"></i>Generate Random</button><button class="btn btn--white" type="button" data-next>Continue</button></div>
+    </section>
+
+    <section class="panel wiz" data-step="2" hidden>
+      <div class="field"><label class="label" for="wname">Wallet Name</label><input class="input" id="wname" placeholder="Wallet 1">
+        <span class="helper">Stored in plaintext outside the encryption — visible without password.</span></div>
+      <h2 class="h3 mt-24">Set Password</h2>
+      <p class="helper" style="font-size:15px">Choose a strong password. With honey encryption, any password will produce a valid-looking mnemonic during decryption — only the correct password recovers your real seed phrase.</p>
+      <div class="field"><div class="input-wrap"><input class="input" id="pw1" type="password" placeholder="Password"><button class="btn btn--glass btn--sm" type="button" data-toggle-visibility="pw1">Show</button></div></div>
+      <div class="field"><input class="input" id="pw2" type="password" placeholder="Confirm password"></div>
+      <div class="actions"><button class="ghost-btn" type="button"><i data-icon="qr"></i>or use Password QR</button><button class="ghost-btn" type="button"><i data-icon="key"></i>Optional Key</button></div>
+      <div class="actions mt-24"><button class="btn btn--glass" type="button" data-prev>Back to Create</button><button class="btn btn--white" type="button" data-next>Encrypt</button></div>
+    </section>
+
+    <section class="panel wiz result" data-step="3" hidden>
+      <div class="result__qr" id="result-qr"></div>
+      <div>
+        <h2 class="h3">Your encrypted QR is ready</h2>
+        <p class="helper" style="font-size:15px">12-word seed · password protected</p>
+        <div class="actions mt-16"><button class="btn btn--white" type="button"><i data-icon="download"></i>Download</button><button class="btn btn--glass" type="button"><i data-icon="print"></i>Print</button></div>
+        <div class="callout mt-24"><i data-icon="info"></i><span>Store it apart from your password</span></div>
+      </div>
+    </section>
+    <a class="back-link" href="restore.html"><i data-icon="back"></i>Back to Open Wallet</a>
+  </main>
+  <div id="site-footer"></div>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Settings — W2QR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-section="settings" data-page="settings">
+  <div class="sky sky--page" aria-hidden="true"></div>
+  <div id="site-header"></div>
+  <main class="page page--narrow">
+    <div class="eyebrow">Settings</div>
+    <h1 class="page-title">Settings</h1>
+    <p class="page-sub">All settings are stored on this device only and are not synced across devices.</p>
+    <div class="seg settings-tabs" id="settings-tabs"><button type="button" aria-pressed="true" data-value="general">General</button><button type="button" aria-pressed="false" data-value="networks">Networks &amp; Assets</button></div>
+
+    <div id="tab-general" class="mt-24">
+      <section class="panel"><h2 class="panel__title">Appearance</h2>
+        <div class="row"><div><div class="row__label">Theme</div><div class="row__hint">Choose your preferred color scheme</div></div>
+          <div class="seg" id="theme-seg"><button type="button" aria-pressed="true" data-value="dark"><i data-icon="moon"></i>Dark</button><button type="button" aria-pressed="false" data-value="light"><i data-icon="sun"></i>Light</button></div></div>
+      </section>
+      <section class="panel"><h2 class="panel__title">Security</h2>
+        <div class="row"><div><div class="row__label">Auto-lock timer</div><div class="row__hint">Lock wallet after a period of inactivity</div></div>
+          <select class="select" style="width:auto" aria-label="Auto-lock timer"><option>5 minutes</option><option>15 minutes</option><option selected>30 minutes</option><option>1 hour</option><option>2 hours</option><option>Never</option></select></div>
+      </section>
+      <section class="panel"><h2 class="panel__title">Display</h2>
+        <div class="row"><div><div class="row__label">Non-zero balances only</div><div class="row__hint">Show only assets with a balance greater than zero</div></div><button class="switch" role="switch" aria-checked="false" aria-label="Non-zero balances only"></button></div>
+      </section>
+      <section class="panel"><h2 class="panel__title">Store in local device</h2>
+        <div class="row"><div><div class="row__label">Wallet name</div><div class="row__hint">Remember wallet and account names across sessions</div></div><button class="switch" role="switch" aria-checked="true" aria-label="Wallet name"></button></div>
+        <div class="row"><div><div class="row__label">Wallet history</div><div class="row__hint">Keep previously unlocked wallets with receive QR codes. Password is required to unlock.</div></div><button class="switch" role="switch" aria-checked="true" aria-label="Wallet history"></button></div>
+        <div class="row"><div><div class="row__label">Common settings</div><div class="row__hint">Persist theme, lock duration, display preferences and other settings</div></div><button class="switch" role="switch" aria-checked="true" aria-label="Common settings"></button></div>
+        <div class="row"><div><div class="row__label">Active networks &amp; assets</div><div class="row__hint">Remember network and token visibility choices</div></div><button class="switch" role="switch" aria-checked="true" aria-label="Active networks &amp; assets"></button></div>
+      </section>
+      <section class="panel"><h2 class="panel__title">When wallet is locked</h2>
+        <label class="radio-card"><input type="radio" name="locked" checked><span><span class="row__label">Show unlock prompt only</span><span class="row__hint" style="display:block">Display a minimal lock screen with an Unlock button</span></span></label>
+        <label class="radio-card"><input type="radio" name="locked"><span><span class="row__label">Show last wallet data</span><span class="row__hint" style="display:block">Display cached wallet list, balances, prices and total value in read-only mode. Password is required to unlock and transact.</span></span></label>
+        <label class="radio-card"><input type="radio" name="locked"><span><span class="row__label">Show assets with hidden balances</span><span class="row__hint" style="display:block">Display the asset list but mask all balance amounts and values. Password is required to reveal and transact.</span></span></label>
+      </section>
+    </div>
+
+    <div id="tab-networks" class="mt-24" hidden>
+      <section class="panel">
+        <div class="panel-head"><h2 class="panel__title" style="margin:0">Networks &amp; Assets</h2><div class="actions" style="margin:0"><button class="btn btn--glass btn--sm" type="button">+ Token</button><button class="btn btn--white btn--sm" type="button">+ Network</button></div></div>
+        <div class="nets mt-16">
+        <div class="net"><span class="net__dot" style="--h:0"></span><div class="net__main"><b>Ethereum</b><span>Chain ID: 1 · 7 assets</span></div><span class="badge badge--ok">Active</span><i class="tile__arrow" style="position:static;opacity:1;transform:none" data-icon="arrow"></i></div>
+        <div class="net"><span class="net__dot" style="--h:36"></span><div class="net__main"><b>BNB Chain</b><span>Chain ID: 56 · 1 assets</span></div><i class="tile__arrow" style="position:static;opacity:1;transform:none" data-icon="arrow"></i></div>
+        <div class="net"><span class="net__dot" style="--h:72"></span><div class="net__main"><b>Solana</b><span>5 assets</span></div><i class="tile__arrow" style="position:static;opacity:1;transform:none" data-icon="arrow"></i></div>
+        <div class="net"><span class="net__dot" style="--h:108"></span><div class="net__main"><b>Bitcoin</b><span>1 assets</span></div><i class="tile__arrow" style="position:static;opacity:1;transform:none" data-icon="arrow"></i></div>
+        <div class="net"><span class="net__dot" style="--h:144"></span><div class="net__main"><b>Arbitrum One</b><span>Chain ID: 42161 · 2 assets</span></div><i class="tile__arrow" style="position:static;opacity:1;transform:none" data-icon="arrow"></i></div>
+        <div class="net"><span class="net__dot" style="--h:180"></span><div class="net__main"><b>Base</b><span>Chain ID: 8453 · 2 assets</span></div><i class="tile__arrow" style="position:static;opacity:1;transform:none" data-icon="arrow"></i></div>
+        <div class="net"><span class="net__dot" style="--h:216"></span><div class="net__main"><b>Polygon</b><span>Chain ID: 137 · 6 assets</span></div><i class="tile__arrow" style="position:static;opacity:1;transform:none" data-icon="arrow"></i></div>
+        <div class="net"><span class="net__dot" style="--h:252"></span><div class="net__main"><b>Optimism</b><span>Chain ID: 10 · 2 assets</span></div><i class="tile__arrow" style="position:static;opacity:1;transform:none" data-icon="arrow"></i></div>
+        <div class="net"><span class="net__dot" style="--h:288"></span><div class="net__main"><b>Avalanche C-Chain</b><span>Chain ID: 43114 · 8 assets</span></div><i class="tile__arrow" style="position:static;opacity:1;transform:none" data-icon="arrow"></i></div>
+        <div class="net"><span class="net__dot" style="--h:324"></span><div class="net__main"><b>Zcash</b><span>1 assets</span></div><i class="tile__arrow" style="position:static;opacity:1;transform:none" data-icon="arrow"></i></div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/pages.js"></script>
+</body>
+</html>

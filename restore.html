@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open Wallet — W2QR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-section="restore" data-page="">
+  <div class="sky sky--page" aria-hidden="true"></div>
+  <div id="site-header"></div>
+  <main class="page">
+    <div class="eyebrow">Open Wallet</div>
+    <h1 class="page-title">Open Wallet</h1>
+    <p class="page-sub">Load your encrypted QR data to get started. The format will be detected automatically.</p>
+    <div class="grid-2">
+      <a class="tile" href="restore-camera.html">
+        <span class="tile__icon"><i data-icon="camera"></i></span>
+        <span><span class="tile__title">Scan with Camera</span><p class="tile__text">Use your device camera to scan a printed or on-screen W2QR code.</p></span>
+        <i class="tile__arrow" data-icon="arrow"></i>
+      </a>
+      <a class="tile" href="restore-bridge.html">
+        <span class="tile__icon"><i data-icon="phone"></i></span>
+        <span><span class="tile__title">Scan with Mobile</span><p class="tile__text">Use your phone to scan a QR code or enter a seed phrase, then transfer securely to this device via encrypted bridge.</p></span>
+        <i class="tile__arrow" data-icon="arrow"></i>
+      </a>
+      <a class="tile" href="restore-upload.html">
+        <span class="tile__icon"><i data-icon="upload"></i></span>
+        <span><span class="tile__title">Upload File</span><p class="tile__text">Drag and drop or browse for a QR code image (PNG, JPG, SVG), a text backup file (JSON, TXT), or a .w2qr encrypted backup. Supports multiple files at once.</p></span>
+        <i class="tile__arrow" data-icon="arrow"></i>
+      </a>
+      <a class="tile" href="restore-drive.html">
+        <span class="tile__icon"><i data-icon="drive"></i></span>
+        <span><span class="tile__title">Restore from Google Drive</span><p class="tile__text">Sign in with your Google account to retrieve an encrypted backup saved to your Drive. Your password never leaves this device.</p></span>
+        <i class="tile__arrow" data-icon="arrow"></i>
+      </a>
+      <a class="tile" href="create.html">
+        <span class="tile__icon"><i data-icon="plus"></i></span>
+        <span><span class="tile__title">Create New</span><p class="tile__text">Generate a new seed phrase and encrypt it as a QR code for secure storage.</p></span>
+        <i class="tile__arrow" data-icon="arrow"></i>
+      </a>
+      <a class="tile" href="restore-import.html">
+        <span class="tile__icon"><i data-icon="doc"></i></span>
+        <span><span class="tile__title">Import Seed Phrase</span><p class="tile__text">Already have a seed phrase? Enter it directly to unlock your wallet without scanning a QR code.</p></span>
+        <i class="tile__arrow" data-icon="arrow"></i>
+      </a>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/pages.js"></script>
+</body>
+</html>

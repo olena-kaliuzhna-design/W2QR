@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Restore Mnemonic — W2QR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-section="tools" data-page="recover">
+  <div class="sky sky--page" aria-hidden="true"></div>
+  <div id="site-header"></div>
+  <main class="page page--narrow">
+    <div class="eyebrow">Tools</div>
+    <h1 class="page-title">Restore Mnemonic</h1>
+    <p class="page-sub">Recover a BIP-39 phrase when some words are wrong or missing</p>
+    <div class="panel">
+      <p class="helper" style="font-size:15px;margin-top:0">Enter the words you know. Leave positions blank for missing words, or fill all words and select how many might be wrong.</p>
+      <div class="panel-head"><div class="row-inline" style="gap:12px"><span class="label">Phrase length:</span><div class="seg"><button type="button" aria-pressed="true">12 words</button><button type="button" aria-pressed="false">24 words</button></div></div>
+        <button class="ghost-btn" type="button"><i data-icon="paste"></i>Paste from clipboard</button></div>
+      <div class="words mt-24" id="words">
+        <label class="word"><span>1.</span><input class="input" placeholder="???" aria-label="Word 1"></label>
+        <label class="word"><span>2.</span><input class="input" placeholder="???" aria-label="Word 2"></label>
+        <label class="word"><span>3.</span><input class="input" placeholder="???" aria-label="Word 3"></label>
+        <label class="word"><span>4.</span><input class="input" placeholder="???" aria-label="Word 4"></label>
+        <label class="word"><span>5.</span><input class="input" placeholder="???" aria-label="Word 5"></label>
+        <label class="word"><span>6.</span><input class="input" placeholder="???" aria-label="Word 6"></label>
+        <label class="word"><span>7.</span><input class="input" placeholder="???" aria-label="Word 7"></label>
+        <label class="word"><span>8.</span><input class="input" placeholder="???" aria-label="Word 8"></label>
+        <label class="word"><span>9.</span><input class="input" placeholder="???" aria-label="Word 9"></label>
+        <label class="word"><span>10.</span><input class="input" placeholder="???" aria-label="Word 10"></label>
+        <label class="word"><span>11.</span><input class="input" placeholder="???" aria-label="Word 11"></label>
+        <label class="word"><span>12.</span><input class="input" placeholder="???" aria-label="Word 12"></label>
+      </div>
+      <div class="callout mt-24"><i data-icon="info"></i><span><strong>Missing words mode</strong> — <span id="blank-n">12</span> blank position<span id="blank-s">s</span> detected. Will try all BIP-39 words at those positions.</span></div>
+      <div class="stats mt-16"><div><span>Search space:</span><b class="mono" id="space">5.444517870735016e+30</b></div><div><span>Estimated:</span><b class="mono" id="est">~3.024732150408342e+30 hours</b></div></div>
+      <button class="btn btn--white btn--block mt-24" type="button">Find Valid Mnemonics</button>
+    </div>
+    <a class="back-link" href="tools.html"><i data-icon="back"></i>Tools</a>
+  </main>
+  <div id="site-footer"></div>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/pages.js"></script>
+</body>
+</html>

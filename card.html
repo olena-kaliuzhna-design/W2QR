@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create Your W2QR Card — W2QR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-section="tools" data-page="card">
+  <div class="sky sky--page" aria-hidden="true"></div>
+  <div id="site-header"></div>
+  <main class="page">
+    <div class="eyebrow">Tools · Plastic Card</div>
+    <h1 class="page-title">Create Your W2QR Card</h1>
+    <p class="page-sub">Design a card with a QR code for your encrypted wallet or password.</p>
+    <div class="card-layout">
+      <div class="card-preview">
+        <div class="seg" id="side-seg"><button type="button" aria-pressed="true" data-value="front">Front</button><button type="button" aria-pressed="false" data-value="back">Back</button></div>
+        <div class="w2card" id="w2card">
+          <div class="w2card__face w2card__front">
+            <div class="w2card__top"><span class="w2card__brand"><i data-icon="logo"></i>W2QR</span><span class="mono w2card__code" id="card-code">W2QR-01</span></div>
+            <div class="w2card__qr" id="card-qr"></div>
+            <div class="w2card__name" id="card-name">ALEX WALLET</div>
+          </div>
+          <div class="w2card__face w2card__back"><div class="w2card__stripe"></div><p>W2QR · Midnight</p></div>
+        </div>
+        <p class="helper" style="text-align:center">CR80 · credit-card size</p>
+      </div>
+      <div class="panel">
+        <div class="field"><span class="label">Design</span>
+          <div class="design-row"><span class="swatch"></span><div><b>Midnight</b><div class="helper">Dark minimalist design with purple accents</div></div><a class="link" href="#">Change Design</a></div></div>
+        <div class="field"><span class="label">QR Code Theme</span><div class="seg"><button type="button" aria-pressed="false">Light</button><button type="button" aria-pressed="true">Dark</button><button type="button" aria-pressed="false">Fore</button><button type="button" aria-pressed="false">BG</button></div></div>
+        <div class="field"><span class="label">Personalization</span>
+          <label class="label" for="nick">Nickname</label>
+          <div class="input-wrap"><input class="input" id="nick" maxlength="20" placeholder="ALEX WALLET"><span class="helper counter" id="nick-count">0/20</span></div>
+          <label class="label" for="wcode">Wallet Code</label><input class="input" id="wcode" placeholder="W2QR-01">
+          <label class="check"><input type="checkbox" id="show-code" checked> Show wallet code on card</label></div>
+        <div class="field"><span class="label">QR Content</span><div class="seg"><button type="button" aria-pressed="true">Encrypted Wallet</button><button type="button" aria-pressed="false">Password</button><button type="button" aria-pressed="false">Load from Image</button></div></div>
+        <div class="field"><label class="label" for="mn">Mnemonic Phrase</label><textarea class="textarea" id="mn" placeholder="Enter your 12 or 24 word mnemonic phrase..."></textarea>
+          <div class="row-inline"><span class="helper">BIP-39 seed phrase</span><a class="link" href="create.html">Create New</a></div></div>
+        <div class="field"><label class="label" for="cpw">Password</label><div class="input-wrap"><input class="input" id="cpw" type="password" placeholder="Encryption password"><button class="btn btn--glass btn--sm" type="button" data-toggle-visibility="cpw">Show</button></div>
+          <div class="actions"><button class="ghost-btn" type="button"><i data-icon="qr"></i>or use Password QR</button><button class="ghost-btn" type="button"><i data-icon="key"></i>Optional Key</button></div></div>
+        <button class="btn btn--white btn--block" type="button">Generate Card</button>
+      </div>
+    </div>
+    <a class="back-link" href="tools.html"><i data-icon="back"></i>Tools</a>
+  </main>
+  <div id="site-footer"></div>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/pages.js"></script>
+</body>
+</html>
